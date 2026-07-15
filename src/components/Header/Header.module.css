@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  width: clamp(196.75px, 5.9vw + 173.74px, 287px);
+}
+.header .globalNav {
+  display: none;
+}
+.header .bBtn {
+  display: block;
+  width: clamp(76.64px, 2.2vw + 68.06px, 110.24px);
+  height: clamp(48.96px, 1.4vw + 43.5px, 70.43px);
+  border-radius: 50%;
+}
+/*# sourceMappingURL=Header.module.css.map */

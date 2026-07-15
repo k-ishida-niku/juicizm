@@ -1,0 +1,12 @@
+$main-color: #ff5206;
+$font-color: #333;
+$base-color: #ffefda;
+
+$font-dela: "dela-gothic-one";
+$font-modak: "modak";
+
+@mixin res($bp: 767px) {
+  @media (width > $bp) {
+    @content;
+  }
+}
