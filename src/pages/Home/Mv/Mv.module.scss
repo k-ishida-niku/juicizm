@@ -1,4 +1,125 @@
 .Mv {
-  .siteTitleContainer {
+  width: 100%;
+  height: 100vh;
+  overflow-x: clip;
+  position: relative;
+  isolation: isolate;
+  .mvInner {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 116.1px 0 0;
+    @include res($bp: 389px) {
+      width: clamp(356.96px, 97.65vw + -23.875px, 1476px);
+    }
+    @include res {
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding: 0 0 7vh;
+    }
+    .siteTitle {
+      width: clamp(356.96px, 39.29vw + 203.729px, 958.09px);
+      position: relative;
+      isolation: isolate;
+      img {
+        padding-top: 18vh;
+        display: block;
+        @include res {
+          padding-top: 0;
+        }
+      }
+      .titleStar {
+        width: clamp(231.62px, 27.19vw + 125.579px, 543.19px);
+        position: absolute;
+        z-index: -1;
+        inset: auto 0 0 auto;
+        transform: translate(35%, 35%);
+        @include res {
+          inset: auto auto 0 0;
+          transform: translate(-25%, 23%);
+        }
+      }
+    }
+  }
+  .mvBg {
+    width: clamp(596.13px, 115.87vw + 144.237px, 1923.96px);
+    height: clamp(657.7797px, 5.2vw + 637.5px, 717.4px);
+    position: absolute;
+    inset: 116.1px auto auto 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    translate: 7vw 0;
+    @include res {
+      top: clamp(91.9px, 17.19vw + -172.138px, 157.9px);
+      translate: -0.18vw 0;
+    }
+    .mvImg01 {
+      width: clamp(404px, 46.8vw + 221.48px, 940.31px);
+      position: absolute;
+      inset: clamp(23px, 2.88vw + 11.768px, 56px) auto auto 0;
+      .mvImgText {
+        width: clamp(459.63px, 53.24vw + 251.994px, 1069.79px);
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .mvImg02 {
+      width: clamp(362.24px, 20.47vw + 282.407px, 596.82px);
+      position: absolute;
+      inset: auto clamp(36px, 1.48vw + 30.228px, 53px) clamp(24px, 1.05vw + 19.905px, 36px) auto;
+      .mvImgText {
+        width: clamp(429.92px, 24.29vw + 335.189px, 708.32px);
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .mvBgStarLT {
+      width: clamp(290.72px, 24.67vw + 194.507px, 573.48px);
+      position: absolute;
+      z-index: -1;
+      inset: 0 auto auto 0;
+      transform: translate(10%, -46%);
+      @include res {
+        transform: translate(16%, -33%);
+      }
+    }
+    .mvBgStarFree {
+      width: clamp(149.27px, 51.11vw + -50.059px, 735px);
+      position: absolute;
+      z-index: -1;
+      inset: auto auto 0 0;
+      transform: translate(90%, -10%);
+      @include res {
+        inset: 0 0 auto auto;
+        transform: translate(10%, -30%);
+      }
+      .dropPc {
+        width: 205.36px;
+        position: absolute;
+        z-index: -2;
+        inset: 0 auto auto 0;
+        transform: translate(-30%, 90%);
+        display: none;
+        @include res {
+          display: block;
+        }
+      }
+    }
+    .drop {
+      width: clamp(84.1px, 14.86vw + 26.146px, 254.43px);
+      position: absolute;
+      z-index: -1;
+      inset: auto 0 0 auto;
+      transform: translate(-136%, 54%);
+      @include res {
+        inset: auto auto 0 0;
+        transform: translate(48%, 65%);
+      }
+    }
   }
 }

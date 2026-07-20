@@ -1,4 +1,8 @@
 .header {
+  width: 100%;
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 1000;
   .headerBar {
     width: 100%;
     height: 40px;
