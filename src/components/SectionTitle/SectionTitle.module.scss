@@ -3,14 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: clamp(20px, 0.87vw + 16.607px, 30px);
   color: $main-color;
-  line-height: 1;
   .sub {
     font-size: clamp(14px, 0.87vw + 10.607px, 24px);
     color: #fff;
     background-color: $main-color;
-    line-height: 1;
-
+    padding: clamp(4px, 0.17vw + 3.337px, 6px) clamp(16px, 0.35vw + 14.635px, 20px);
+    border-radius: 50px;
+    opacity: 0;
+    transform: translate(0, 30px);
     &.white {
       background-color: #fff;
       color: $main-color;
@@ -18,9 +20,15 @@
   }
   .titleText {
     font-size: clamp(60px, 6.98vw + 32.778px, 140px);
-    line-height: 1;
+    display: flex;
+    &.white {
+      color: #fff;
+    }
     .char {
       line-height: 1;
+      text-box: trim-both cap alphabetic;
+      display: block;
+      opacity: 0;
     }
   }
 }

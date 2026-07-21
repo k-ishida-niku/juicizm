@@ -1,0 +1,5 @@
+.about {
+  padding: clamp(80px, 6.98vw + 52.778px, 160px) 0 0;
+  background: url(../../../assets/img/about/about-bg.svg) no-repeat center/cover;
+}
+/*# sourceMappingURL=About.module.css.map */

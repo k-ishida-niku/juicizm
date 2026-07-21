@@ -10,3 +10,7 @@ $font-modak: "modak";
     @content;
   }
 }
+
+@mixin mb($mb: 0px) {
+  margin-bottom: $mb;
+}

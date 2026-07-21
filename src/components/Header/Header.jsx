@@ -8,7 +8,7 @@ export function Header() {
         <ul className={style.hBarImg}>
           {Array.from({ length: 10 }, (_, i) => {
             return (
-              <li>
+              <li key={i}>
                 <img src={headerBart} alt="" />
               </li>
             );
@@ -17,7 +17,7 @@ export function Header() {
         <ul className={style.hBarImg}>
           {Array.from({ length: 10 }, (_, i) => {
             return (
-              <li>
+              <li key={i}>
                 <img src={headerBart} alt="" />
               </li>
             );

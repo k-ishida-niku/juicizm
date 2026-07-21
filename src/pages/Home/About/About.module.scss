@@ -1,2 +1,100 @@
-.sectionTitle {
+.about {
+  padding: clamp(80px, 6.98vw + 52.778px, 160px) 0 clamp(125px, 1.4vw + 119.54px, 141px);
+  background-color: $main-color;
+  mask: url(../../../assets/img/about/about-bg_sp.svg) no-repeat center bottom / cover;
+  overflow-x: clip;
+  @include res($bp: 1537px) {
+    padding: clamp(160px, 11.72vw + -20.019px, 205px) 0 clamp(125px, 1.4vw + 119.54px, 141px);
+    mask-image: url(../../../assets/img/about/about-bg.svg);
+  }
+  .aboutInner {
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 40px 80px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: clamp(209.77px, 37.93vw + 61.843px, 644.49px);
+      aspect-ratio: 1;
+      background: url(../../../assets/img/about/bg-drop.svg) no-repeat center / cover;
+      position: absolute;
+      z-index: -1;
+      inset: 0 0 auto auto;
+      translate: 45% -33%;
+      @include res {
+        inset: 0 auto auto 0;
+        translate: 0 -23%;
+      }
+      @include res($bp: 1699px) {
+        inset: 0 auto auto 0;
+        translate: 8% -23%;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: clamp(161px, 17.42vw + 93.062px, 360.62px);
+      aspect-ratio: 1;
+      background: url(../../../assets/img/about/bg-star.svg) no-repeat center / cover;
+      position: absolute;
+      z-index: -1;
+      inset: auto auto 0 0;
+      translate: -20% 100%;
+      @include res {
+        inset: auto 0 0 auto;
+        translate: -30% 28%;
+      }
+      @include res($bp: 1699px) {
+        translate: -30% 42%;
+      }
+    }
+    @include res($bp: 389px) {
+      width: clamp(340px, 114.31vw + -105.809px, 1650px);
+    }
+    @include res {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      left: -40px;
+    }
+    .aboutImgContainer {
+      width: min(100%, 664.23px);
+      aspect-ratio: 1.19618061627785;
+      position: relative;
+      .sb {
+        width: 71%;
+        position: absolute;
+        inset: 0 auto auto 0;
+        z-index: 1;
+        scale: 0;
+      }
+      .aboutImg {
+        width: 84%;
+        position: absolute;
+        inset: auto 0 0 auto;
+        scale: 0;
+      }
+    }
+    .aboutTextContainer {
+      p {
+        text-align: justify;
+        font-weight: 900;
+        color: #fff;
+        font-size: clamp(18px, 0.17vw + 17.337px, 20px);
+        &:not(:last-child) {
+          margin-bottom: clamp(24px, 0.7vw + 21.27px, 32px);
+        }
+        br {
+          display: none;
+          @include res {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
 }
