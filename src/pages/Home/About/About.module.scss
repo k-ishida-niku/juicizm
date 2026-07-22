@@ -3,6 +3,7 @@
   background-color: $main-color;
   mask: url(../../../assets/img/about/about-bg_sp.svg) no-repeat center bottom / cover;
   overflow-x: clip;
+  margin-bottom: clamp(80px, 7.68vw + 50.048px, 168px);
   @include res($bp: 1537px) {
     padding: clamp(160px, 11.72vw + -20.019px, 205px) 0 clamp(125px, 1.4vw + 119.54px, 141px);
     mask-image: url(../../../assets/img/about/about-bg.svg);

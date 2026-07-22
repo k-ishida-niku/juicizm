@@ -1,0 +1,58 @@
+.commitment {
+  .sectionInner {
+    width: 84%;
+    margin: 0 auto;
+    @include res($bp: 389px) {
+      width: clamp(342px, 98.95vw + -43.905px, 1476px);
+    }
+    .commitmentTitle {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(25px, 2.36vw + 15.796px, 52px) 0;
+      font-weight: normal;
+      color: $main-color;
+      letter-spacing: normal;
+      width: fit-content;
+      margin: 0 auto clamp(40px, 3.49vw + 26.389px, 80px);
+      @include res($bp: 1199px) {
+        align-items: center;
+        width: auto;
+        margin: 0 0 clamp(40px, 3.49vw + 26.389px, 80px);
+      }
+      .titleJp {
+        font-size: clamp(64px, 10.3vw + 23.83px, 182px);
+        text-wrap: nowrap;
+        & > span {
+          display: block;
+          &:last-child {
+            padding-left: 1em;
+          }
+
+          @include res($bp: 1199px) {
+            display: inline;
+            &:last-child {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+      .titleEn {
+        font-size: clamp(22px, 5.06vw + 2.266px, 80px);
+
+        & > span {
+          display: block;
+          &:last-child {
+            padding-left: 3em;
+          }
+
+          @include res($bp: 1199px) {
+            display: inline;
+            &:last-child {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
