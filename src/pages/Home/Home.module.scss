@@ -1,5 +1,6 @@
 .home {
   .bgWrap {
     background-color: $base-color;
+    padding-bottom: clamp(100px, 5.24vw + 79.564px, 160px);
   }
 }
