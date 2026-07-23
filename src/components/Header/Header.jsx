@@ -1,6 +1,6 @@
 import style from "./Header.module.scss";
 import logo from "../../assets/img/global/logo.svg";
-import headerBart from "../../assets/img/global/header-bar.svg";
+import headerBar from "../../assets/img/global/header-bar.svg";
 export function Header() {
   return (
     <header className={style.header}>
@@ -9,7 +9,7 @@ export function Header() {
           {Array.from({ length: 10 }, (_, i) => {
             return (
               <li key={i}>
-                <img src={headerBart} alt="" />
+                <img src={headerBar} alt="" />
               </li>
             );
           })}
@@ -18,7 +18,7 @@ export function Header() {
           {Array.from({ length: 10 }, (_, i) => {
             return (
               <li key={i}>
-                <img src={headerBart} alt="" />
+                <img src={headerBar} alt="" />
               </li>
             );
           })}

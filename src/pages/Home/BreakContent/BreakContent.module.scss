@@ -1,0 +1,56 @@
+.breakContent {
+  overflow-x: clip;
+  background: linear-gradient($base-color 50%, transparent 50%);
+  .bar {
+    width: 100%;
+    display: flex;
+    ul {
+      display: flex;
+      flex-shrink: 0;
+      width: fit-content;
+      animation: h-bar 30s infinite linear;
+
+      li {
+        flex-shrink: 0;
+        width: clamp(118.94px, 10.38vw + 78.458px, 237.88px);
+        height: clamp(15.14px, 1.32vw + 9.992px, 30.28px);
+        padding-right: clamp(7px, 0.52vw + 4.972px, 13px);
+        display: grid;
+        place-items: center;
+      }
+    }
+    &.barReturn {
+      justify-content: flex-end;
+      ul {
+        animation: h-bar-re 30s infinite linear;
+      }
+    }
+  }
+  .breakImg {
+    width: 87%;
+    margin: clamp(14px, 1.4vw + 8.54px, 30px) auto;
+    border-radius: clamp(40px, 1.75vw + 33.175px, 60px);
+    // overflow: clip;
+    aspect-ratio: 0.7125;
+    background: url(../../../assets/img/global/break-img-sp.webp) no-repeat center / cover;
+    @include res {
+      width: 96%;
+      aspect-ratio: 2.58041958041958;
+      background-image: url(../../../assets/img/global/break-img.webp);
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@keyframes h-bar {
+  100% {
+    translate: -100% 0;
+  }
+}
+@keyframes h-bar-re {
+  100% {
+    translate: 100% 0;
+  }
+}

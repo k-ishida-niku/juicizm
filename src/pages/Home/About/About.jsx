@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-import { SectionTitle } from "../../../components/SectionTitle/SectionTitle";
 import sb from "../../../assets/img/about/sb.svg";
 import aboutImg from "../../../assets/img/about/about.webp";
 
@@ -53,7 +52,10 @@ export function About() {
 
   return (
     <section className={style.about} ref={ref}>
-      <SectionTitle text="ABOUT" sub="ジューシズムについて" mb="clamp(60px, 1.75vw + 53.175px, 80px)" />
+      <h2 className={style.sectionTitle} ref={ref}>
+        <span className={`f-dela`}>ジューシズムについて</span>
+        <span className={`f-modak`}>ABOUT</span>
+      </h2>
       <div className={style.aboutInner}>
         <div className={style.aboutImgContainer}>
           <div className={`${style.sb} fadeSb`}>

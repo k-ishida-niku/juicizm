@@ -2,7 +2,7 @@ import style from "./Home.module.scss";
 import { Mv } from "./Mv/Mv";
 import { About } from "./About/About";
 import { Commitment } from "./Commitment/Commitment";
-
+import { BreakContent } from "./BreakContent/BreakContent";
 export function Home() {
   return (
     <main className={style.home}>
@@ -11,6 +11,7 @@ export function Home() {
         <About />
         <Commitment />
       </div>
+      <BreakContent />
     </main>
   );
 }
