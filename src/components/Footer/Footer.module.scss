@@ -1,0 +1,131 @@
+.bar {
+  width: 100%;
+  display: flex;
+  overflow-x: clip;
+  ul {
+    display: flex;
+    flex-shrink: 0;
+    width: fit-content;
+    animation: h-bar 30s infinite linear;
+
+    li {
+      flex-shrink: 0;
+      width: clamp(118.94px, 10.38vw + 78.458px, 237.88px);
+      height: clamp(15.14px, 1.32vw + 9.992px, 30.28px);
+      padding-right: clamp(7px, 0.52vw + 4.972px, 13px);
+      display: grid;
+      place-items: center;
+    }
+  }
+  &.barReturn {
+    justify-content: flex-end;
+    ul {
+      animation: h-bar-re 30s infinite linear;
+    }
+  }
+}
+@keyframes h-bar {
+  100% {
+    translate: -100% 0;
+  }
+}
+@keyframes h-bar-re {
+  100% {
+    translate: 100% 0;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: clamp(80px, 1.75vw + 73.175px, 100px) 0 0;
+  border-radius: 60px 60px 0 0;
+  background-color: $base-color;
+  margin-top: clamp(14px, 1.22vw + 9.242px, 28px);
+  .footerInner {
+    width: min(87%, 1200px);
+    margin: 0 auto 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 49.5px;
+    @include res {
+      flex-direction: row;
+    }
+    .footerInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 40px;
+      gap: 24px 32px;
+      border-bottom: 2px solid $main-color;
+      @include res {
+        flex-direction: row;
+        padding: 0 59.5px 0 0;
+
+        border-bottom: none;
+        border-right: 2px solid $main-color;
+      }
+      .footerLogo {
+        width: clamp(199.53px, 7.63vw + 169.773px, 287px);
+      }
+      .shopInfo {
+        font-style: normal;
+        color: $main-color;
+        font-size: clamp(14px, 0.17vw + 13.337px, 16px);
+        font-weight: 800;
+
+        a {
+          color: $main-color;
+        }
+      }
+    }
+    .footerNav {
+      flex: 1;
+      ul {
+        display: grid;
+        grid-template: auto / repeat(auto-fit, minmax(120px, 1fr));
+        gap: 24px 0;
+        @include res {
+          gap: 0 32px;
+        }
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: clamp(20px, 0.17vw + 19.337px, 22px);
+            color: $main-color;
+            transition: all 0.3s;
+            &::after {
+              content: "";
+              display: block;
+              width: clamp(10.05px, 0.09vw + 9.699px, 11.05px);
+              aspect-ratio: 0.9170124481327801;
+              background: url(../../assets//img/global/arrow.svg) no-repeat center / cover;
+              transition: all 0.3s;
+            }
+            &:hover {
+              opacity: 0.7;
+              &::after {
+                translate: 6px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .catch {
+    width: min(97%, 1498px);
+    margin: 0 auto;
+    translate: 0 5%;
+    @include res {
+      translate: 0 10%;
+    }
+  }
+  .copy {
+    font-size: clamp(12px, 0.17vw + 11.337px, 14px);
+    text-align: center;
+    color: #fff;
+    padding: clamp(8px, 0.7vw + 5.27px, 16px) 0 clamp(8px, 0.35vw + 6.635px, 12px);
+    background-color: $main-color;
+  }
+}

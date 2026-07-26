@@ -1,0 +1,21 @@
+.news {
+  margin-bottom: clamp(100px, 6.98vw + 72.778px, 180px);
+  padding: clamp(80px, 3.49vw + 66.389px, 120px) 0 clamp(60px, 5.24vw + 39.564px, 120px);
+  background-image: repeating-linear-gradient(-45deg, #ff621d, #ff621d clamp(40px, 1.75vw + 33.175px, 60px), #ff5206 clamp(40px, 1.75vw + 33.175px, 60px), #ff5206 clamp(80px, 3.49vw + 66.389px, 120px));
+  .newsInner {
+    width: min(75%, 1200px);
+    margin: 0 auto;
+    .newsIntroContents {
+      margin-bottom: clamp(70px, 3.49vw + 56.389px, 110px);
+      .sectionTitle {
+        @include sectionTitle($tc: #fff, $sc: $main-color, $bg: #fff);
+        flex-direction: column;
+      }
+    }
+    .newsList {
+      display: grid;
+      grid-template: auto / repeat(auto-fit, minmax(280px, 1fr));
+      gap: 79px 47px;
+    }
+  }
+}

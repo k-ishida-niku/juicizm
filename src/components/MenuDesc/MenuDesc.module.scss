@@ -1,0 +1,104 @@
+.menuText {
+  width: clamp(322.82px, 3.94vw + 307.454px, 368px);
+  .menuName {
+    font-weight: normal;
+    margin-bottom: 30px;
+    position: relative;
+    .sb {
+      display: grid;
+      place-items: center;
+      width: clamp(118px, 1.75vw + 111.175px, 138px);
+      aspect-ratio: 1.638888888888889;
+      color: #fff;
+      background: url(../../assets/img/menu/menu-sb.svg) no-repeat center / cover;
+      position: absolute;
+      inset: calc(-180% - 18px) auto auto -10%;
+      @include res {
+        inset: calc(-150% - 18px) auto auto -10%;
+      }
+
+      .sbText {
+        display: block;
+        line-height: 1;
+        width: fit-content;
+        rotate: -16deg;
+        translate: 5% -5%;
+        font-size: clamp(26px, 0.52vw + 23.972px, 32px);
+      }
+    }
+    .mName {
+      font-size: clamp(32px, 1.4vw + 26.54px, 48px);
+      color: $main-color;
+      text-wrap: nowrap;
+      display: block;
+      position: relative;
+      .overlay {
+        display: block;
+        width: calc(100% + 2em);
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+        inset: 0 -2em auto auto;
+      }
+    }
+  }
+  .menuDesc {
+    margin-bottom: 40px;
+    .menuDescText {
+      text-align: justify;
+      @include res {
+        text-wrap: nowrap;
+      }
+    }
+  }
+  .menuPriceList {
+    --template: "item1 item1 item1" auto "item2 item2 item2" auto "item3 item3 item3" auto / 1fr 1fr 1fr;
+    --through: 3;
+    display: grid;
+    grid-template: var(--template);
+
+    .menuPriceContainer {
+      font-weight: normal;
+      font-size: clamp(20px, 0.35vw + 18.635px, 24px);
+      display: grid;
+      grid-template-columns: subgrid;
+      align-items: center;
+      gap: clamp(28.9px, 0.4vw + 27.34px, 33.5px);
+      &:not(:last-child) {
+        margin-bottom: clamp(16px, 0.7vw + 13.27px, 24px);
+      }
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          grid-area: item#{$i};
+        }
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: clamp(102.67px, 1.25vw + 97.795px, 117px);
+        height: 2px;
+        background-color: $font-color;
+      }
+      .gram {
+        color: $main-color;
+        order: -1;
+        flex: 1;
+        letter-spacing: normal;
+        text-wrap: nowrap;
+      }
+      .price {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "税込";
+          display: block;
+          width: 1em;
+          font-family: "Noto Sans jp", sans-serif;
+          font-size: clamp(8px, 0.26vw + 6.986px, 11px);
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

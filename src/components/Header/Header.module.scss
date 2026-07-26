@@ -55,6 +55,12 @@
       font-weight: bold;
       color: #fff;
       font-size: clamp(12px, 0.39vw + 10.479px, 18px);
+      z-index: 10;
+      transition: all 0.1s;
+      &:hover {
+        background-color: $base-color;
+        color: $main-color;
+      }
     }
   }
 }

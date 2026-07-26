@@ -61,32 +61,47 @@
       width: clamp(404px, 46.8vw + 221.48px, 940.31px);
       position: absolute;
       inset: clamp(23px, 2.88vw + 11.768px, 56px) auto auto 0;
+      @include res {
+        translate: 0 -6%;
+      }
       .mvImgText {
-        width: clamp(459.63px, 53.24vw + 251.994px, 1069.79px);
+        width: 110%;
         position: absolute;
         inset: 50% auto auto 50%;
         transform: translate(-50%, -50%);
+        z-index: -1;
+        path {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .mvBgStarLT {
+        width: clamp(290.72px, 24.67vw + 194.507px, 573.48px);
+        position: absolute;
+        z-index: -1;
+        inset: 0 auto auto 0;
+        transform: translate(10%, -46%);
+        @include res {
+          transform: translate(14%, -38%) rotate(60deg);
+        }
       }
     }
     .mvImg02 {
       width: clamp(362.24px, 20.47vw + 282.407px, 596.82px);
       position: absolute;
       inset: auto clamp(36px, 1.48vw + 30.228px, 53px) clamp(24px, 1.05vw + 19.905px, 36px) auto;
+      @include res {
+        translate: 0 20%;
+        z-index: -1;
+      }
       .mvImgText {
-        width: clamp(429.92px, 24.29vw + 335.189px, 708.32px);
+        width: 110%;
         position: absolute;
         inset: 50% auto auto 50%;
         transform: translate(-50%, -50%);
-      }
-    }
-    .mvBgStarLT {
-      width: clamp(290.72px, 24.67vw + 194.507px, 573.48px);
-      position: absolute;
-      z-index: -1;
-      inset: 0 auto auto 0;
-      transform: translate(10%, -46%);
-      @include res {
-        transform: translate(16%, -33%);
+        @include res {
+          width: clamp(429.92px, 24.29vw + 335.189px, 708.32px);
+        }
       }
     }
     .mvBgStarFree {
@@ -120,6 +135,28 @@
       @include res {
         inset: auto auto 0 0;
         transform: translate(48%, 65%);
+      }
+    }
+  }
+}
+
+.textPath {
+  font-size: 40px;
+  font-family: $font-dela, sans-serif;
+  fill: #333;
+  letter-spacing: 1;
+  &.small {
+    font-size: 28px;
+    &.pc {
+      display: none;
+    }
+    @include res {
+      font-size: 36px;
+      &.pc {
+        display: block;
+      }
+      &.sp {
+        display: none;
       }
     }
   }

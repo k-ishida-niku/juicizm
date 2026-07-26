@@ -1,0 +1,11 @@
+.menuText .menuName {
+  font-weight: normal;
+}
+.menuText .menuName .sb {
+  display: none;
+  color: #fff;
+}
+.menuText .menuName .mName {
+  font-size: clamp(32px, 1.4vw + 26.54px, 48px);
+}
+/*# sourceMappingURL=MenuDesc.module.css.map */

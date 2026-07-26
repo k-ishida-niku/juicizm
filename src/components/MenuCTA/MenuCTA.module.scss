@@ -1,0 +1,76 @@
+.menuCta {
+  display: flex;
+  padding: clamp(40px, 1.75vw + 33.175px, 60px) clamp(24px, 4.89vw + 4.929px, 80px);
+  border-radius: 40px;
+  background-color: $base-color;
+  flex-direction: column;
+  gap: 32px 0;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: $base-color;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: $main-color;
+    position: absolute;
+    inset: clamp(14px, 1.4vw + 8.54px, 30px) auto auto calc(clamp(14px, 1.4vw + 8.54px, 30px) * -1);
+    z-index: -2;
+  }
+
+  @include res {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ctaTextContainer {
+    .ctaTitle {
+      display: flex;
+      flex-direction: column;
+      font-weight: normal;
+      margin-bottom: clamp(32px, 0.35vw + 30.635px, 36px);
+      gap: clamp(17px, 0.52vw + 14.972px, 23px) 0;
+      .sub {
+        display: block;
+        width: fit-content;
+        font-size: clamp(16px, 0.7vw + 13.27px, 24px);
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          width: clamp(14.34px, 0.56vw + 12.156px, 20.79px);
+          aspect-ratio: 0.6065989847715736;
+          background: url(../../assets/img/menu/menu-drop.svg) no-repeat center / cover;
+          position: absolute;
+          inset: 0 0 auto auto;
+          translate: calc(100% + 6px) -20%;
+        }
+      }
+      .title {
+        font-size: clamp(48px, 2.79vw + 37.119px, 80px);
+        color: $main-color;
+      }
+    }
+    .ctaText {
+      text-align: justify;
+    }
+  }
+  .CtaBtnContainer {
+    width: min(100%, 455px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 1.4vw + 2.54px, 24px) 0;
+  }
+}

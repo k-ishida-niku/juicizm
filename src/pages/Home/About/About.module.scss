@@ -12,6 +12,9 @@
   }
   //
   .sectionTitle {
+    @include sectionTitle($tc: #fff, $sc: $main-color, $bg: #fff, $mb: clamp(56px, 1.83vw + 48.863px, 77px));
+    flex-direction: column;
+    align-items: center;
   }
   //
   .aboutInner {
@@ -87,6 +90,15 @@
       }
     }
     .aboutTextContainer {
+      @include res($bp: 499px) {
+        width: 90%;
+        margin: 0 auto;
+      }
+      @include res {
+        width: auto;
+        margin: 0;
+      }
+
       p {
         text-align: justify;
         font-weight: 900;

@@ -14,3 +14,32 @@ $font-modak: "modak";
 @mixin mb($mb: 0px) {
   margin-bottom: $mb;
 }
+
+@mixin sectionTitle($tc: $main-color, $sc: #fff, $bg: $main-color, $mb: 0) {
+  display: flex;
+  gap: clamp(22px, 1.05vw + 17.905px, 34px) clamp(17px, 0.7vw + 14.27px, 25px);
+  font-weight: normal;
+  text-box: trim-both cap alphabetic;
+  margin-bottom: $mb;
+  .sub {
+    padding: clamp(4px, 0.17vw + 3.337px, 6px) clamp(16px, 0.35vw + 14.635px, 20px);
+    color: $sc;
+    font-size: clamp(14px, 0.87vw + 10.607px, 24px);
+    background-color: $bg;
+    text-box: trim-both cap alphabetic;
+    display: block;
+    width: fit-content;
+    border-radius: 50px;
+  }
+  .sTitle {
+    color: $tc;
+    font-size: clamp(60px, 6.98vw + 32.778px, 140px);
+    text-box: trim-both cap alphabetic;
+    display: flex;
+    .char {
+      opacity: 0;
+      text-box: trim-both cap alphabetic;
+      display: block;
+    }
+  }
+}

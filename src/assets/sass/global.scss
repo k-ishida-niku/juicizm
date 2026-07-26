@@ -42,3 +42,9 @@ video {
 .f-modak {
   font-family: $font-modak, sans-serif;
 }
+
+.spBr {
+  @include res {
+    display: none;
+  }
+}

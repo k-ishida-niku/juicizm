@@ -1,0 +1,12 @@
+.menuCta .ctaTitle {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+}
+.menuCta .ctaTitle .sub {
+  font-size: clamp(16px, 0.7vw + 13.27px, 24px);
+}
+.menuCta .ctaTitle .title {
+  font-size: clamp(48px, 2.79vw + 37.119px, 80px);
+}
+/*# sourceMappingURL=MenuCTA.module.css.map */

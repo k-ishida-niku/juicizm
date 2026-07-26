@@ -149,12 +149,34 @@
         .commitmentItemText {
           width: clamp(230px, 2.62vw + 219.782px, 260px);
           margin: 0 auto;
+          position: relative;
           p {
             font-size: clamp(14px, 0.17vw + 13.337px, 16px);
             letter-spacing: normal;
             &:first-child {
               margin-bottom: clamp(16px, 0.87vw + 12.607px, 26px);
             }
+          }
+          .textBg {
+            position: absolute;
+            inset: 50% auto auto 50%;
+            translate: -50% -50%;
+            z-index: -1;
+          }
+        }
+        &:first-child {
+          .textBg {
+            width: clamp(193.71px, 11.79vw + 147.729px, 328.78px);
+          }
+        }
+        &:nth-child(2) {
+          .textBg {
+            width: clamp(155px, 6.72vw + 128.792px, 232px);
+          }
+        }
+        &:last-child {
+          .textBg {
+            width: clamp(106.03px, 4.49vw + 88.519px, 157.48px);
           }
         }
       }

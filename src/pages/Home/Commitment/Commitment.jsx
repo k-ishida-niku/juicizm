@@ -1,6 +1,11 @@
 import style from "./Commitment.module.scss";
 import titleDrop from "../../../assets/img/commitment/title-drop.svg";
 import titleStar from "../../../assets/img/global/starburst.svg";
+
+import commitmentBg01 from "../../../assets/img/commitment/commitment-bg01.svg";
+import commitmentBg02 from "../../../assets/img/commitment/commitment-bg02.svg";
+import commitmentBg03 from "../../../assets/img/commitment/commitment-bg03.svg";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,18 +17,21 @@ const commitmentContents = [
     title: "ガツンと粗挽き",
     text01: "肉粒感たっぷりの粗挽き肉を使用。",
     text02: "噛むほどに旨みが広がる、肉好きのためのハンバーグです。",
+    bg: commitmentBg01,
   },
   {
     num: "02",
     title: "溢れる肉汁",
     text01: "ナイフを入れた瞬間、勢いよくあふれ出す肉汁。",
     text02: "高温で一気に焼き上げることで、旨味を閉じ込めています。",
+    bg: commitmentBg02,
   },
   {
     num: "03",
     title: "腹ペコ歓迎",
     text01: "今日は思い切り肉を食べたい！",
     text02: "そんな日に応える、満足感たっぷりのボリュームでお待ちしています。",
+    bg: commitmentBg03,
   },
 ];
 
@@ -126,6 +134,9 @@ export function Commitment() {
                 <div className={style.commitmentItemText}>
                   <p>{item.text01}</p>
                   <p>{item.text02}</p>
+                  <div className={style.textBg}>
+                    <img src={item.bg} alt="" />
+                  </div>
                 </div>
               </li>
             );

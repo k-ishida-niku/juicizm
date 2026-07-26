@@ -1,6 +1,9 @@
 .breakContent {
   overflow-x: clip;
   background: linear-gradient($base-color 50%, transparent 50%);
+  position: relative;
+  overflow-x: clip;
+  margin-bottom: clamp(100px, 5.24vw + 79.564px, 160px);
   .bar {
     width: 100%;
     display: flex;
@@ -41,6 +44,22 @@
     img {
       height: 100%;
       object-fit: cover;
+    }
+  }
+  .breakStar {
+    width: clamp(229px, 12.22vw + 181.342px, 369px);
+    position: absolute;
+    inset: -15% -15% auto auto;
+    @include res {
+      inset: -15% -3% auto auto;
+    }
+  }
+  .drop {
+    width: clamp(116px, 6.98vw + 88.778px, 196px);
+    position: absolute;
+    inset: auto auto -10% -8%;
+    @include res {
+      inset: auto auto -5% 5%;
     }
   }
 }

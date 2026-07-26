@@ -1,0 +1,8 @@
+.ctaBtn::after {
+  content: "";
+  display: block;
+  width: clamp(12.32px, 0.59vw + 10.019px, 19.07px);
+  aspect-ratio: 0.9168269231;
+  background: url(../../assets/img/global/arrow-white.svg) no-repeat center/cover;
+}
+/*# sourceMappingURL=CtaBtn.module.css.map */

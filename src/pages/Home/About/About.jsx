@@ -1,5 +1,7 @@
 import style from "./About.module.scss";
 
+import { useFadeTitle } from "../../../hooks/useFadeTitle";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -9,9 +11,15 @@ import sb from "../../../assets/img/about/sb.svg";
 import aboutImg from "../../../assets/img/about/about.webp";
 
 export function About() {
-  const ref = useRef(null);
+  const fadeRef = useRef(null);
+  const fadeTitleRef = useFadeTitle(null);
+  const titleData = "ABOUT";
+  const titleArr = [...titleData];
+
   useEffect(() => {
-    const q = gsap.utils.selector(ref);
+    const q = gsap.utils.selector(fadeRef);
+
+    // フェードイン
     const ctx = gsap.context(() => {
       gsap.to(q(".fadeSb"), {
         scale: 1,
@@ -51,10 +59,18 @@ export function About() {
   }, []);
 
   return (
-    <section className={style.about} ref={ref}>
-      <h2 className={style.sectionTitle} ref={ref}>
-        <span className={`f-dela`}>ジューシズムについて</span>
-        <span className={`f-modak`}>ABOUT</span>
+    <section className={style.about} ref={fadeRef} id="about">
+      <h2 className={style.sectionTitle} ref={fadeTitleRef}>
+        <span className={`f-dela ${style.sub} subText`}>ジューシズムについて</span>
+        <span className={`f-modak ${style.sTitle} titleText`}>
+          {titleArr.map((item, index) => {
+            return (
+              <span key={index} className={`${style.char} char`}>
+                {item}
+              </span>
+            );
+          })}
+        </span>
       </h2>
       <div className={style.aboutInner}>
         <div className={style.aboutImgContainer}>
