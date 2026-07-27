@@ -12,59 +12,57 @@ export function Loading() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(loadingRef);
-      window.addEventListener("load", () => {
-        if (myState === "first-visit") {
-          const tl = gsap.timeline();
-          tl.fromTo(
-            q(".loadBar"),
+      if (myState === "first-visit") {
+        const tl = gsap.timeline();
+        tl.fromTo(
+          q(".loadBar"),
+          {
+            width: "100%",
+          },
+          {
+            width: "0%",
+            duration: 3,
+          },
+        )
+          .fromTo(
+            q(".loadMessage"),
             {
-              width: "100%",
+              scale: 0,
             },
             {
-              width: "0%",
-              duration: 3,
+              scale: 1,
+              duration: 0.5,
+              ease: "bounce.out",
             },
           )
-            .fromTo(
-              q(".loadMessage"),
-              {
-                scale: 0,
+          .fromTo(
+            loadingRef.current,
+            { opacity: 1, visibility: "visible" },
+            {
+              opacity: 0,
+              duration: 0.5,
+              onComplete: () => {
+                gsap.set(loadingRef.current, { visibility: "hidden" });
               },
-              {
-                scale: 1,
-                duration: 0.5,
-                ease: "bounce.out",
-              },
-            )
-            .fromTo(
-              loadingRef.current,
-              { opacity: 1, visibility: "visible" },
-              {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: () => {
-                  gsap.set(loadingRef.current, { visibility: "hidden" });
-                },
-              },
-            );
-          gsap.to(numRef.current, {
-            val: 0,
-            duration: 3,
-            ease: "power1.out",
-            onUpdate: () => {
-              // 小数点を切り捨ててステートに反映
-              setCount(Math.floor(numRef.current.val));
             },
-          });
-          setMyState("visited");
-        } else {
-          gsap.to(loadingRef.current, {
-            opacity: 0,
-            visibility: "hidden",
-            duration: 0,
-          });
-        }
-      });
+          );
+        gsap.to(numRef.current, {
+          val: 0,
+          duration: 3,
+          ease: "power1.out",
+          onUpdate: () => {
+            // 小数点を切り捨ててステートに反映
+            setCount(Math.floor(numRef.current.val));
+          },
+        });
+        setMyState("visited");
+      } else {
+        gsap.to(loadingRef.current, {
+          opacity: 0,
+          visibility: "hidden",
+          duration: 0,
+        });
+      }
     });
     return () => ctx.revert();
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -13,6 +13,7 @@ export function SessionStateProvider({ children }) {
 
   useEffect(() => {
     sessionStorage.setItem("my_key", myState);
+    console.log(sessionStorage.getItem("my_key"));
   }, [myState]);
 
   return <SessionStateContext.Provider value={{ myState, setMyState }}>{children}</SessionStateContext.Provider>;
