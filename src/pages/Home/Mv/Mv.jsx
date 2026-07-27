@@ -17,21 +17,23 @@ export function Mv() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(mvRef);
-      window.addEventListener("load", () => {
-        if (myState === "first-visit") {
-          setTimeout(() => {
-            mvAnime();
-          }, 3500);
-        } else {
-          return;
-        }
-      });
+      if (myState === "first-visit") {
+        gsap.set(q(".fade-free, .fade-LT, .fadeImg, .title-star, .title-img, .fade-drop"), {
+          autoAlpha: 0,
+        });
+        setTimeout(() => {
+          mvAnime();
+        }, 3500);
+      } else {
+        return;
+      }
 
       function mvAnime() {
         const tl = gsap.timeline();
         tl.fromTo(
           q(".fade-free"),
           {
+            opacity: 1,
             scale: 0,
           },
           { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -39,6 +41,7 @@ export function Mv() {
           .fromTo(
             q(".fade-LT"),
             {
+              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -46,6 +49,7 @@ export function Mv() {
           .fromTo(
             q(".fadeImg"),
             {
+              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -53,6 +57,7 @@ export function Mv() {
           .fromTo(
             q(".title-star"),
             {
+              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -60,6 +65,7 @@ export function Mv() {
           .fromTo(
             q(".title-img"),
             {
+              opacity: 1,
               scale: 0,
               rotate: -45,
             },
@@ -89,7 +95,7 @@ export function Mv() {
       }
     });
     return () => ctx.revert();
-  }, []);
+  }, [myState]);
 
   return (
     <div className={style.Mv} ref={mvRef}>
