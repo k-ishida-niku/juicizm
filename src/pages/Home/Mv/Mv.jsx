@@ -17,14 +17,16 @@ export function Mv() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(mvRef);
+
+      const targets = q(".fade-free, .fade-LT, .fadeImg, .title-star, .title-img, .fade-drop");
       if (myState === "first-visit") {
-        gsap.set(q(".fade-free, .fade-LT, .fadeImg, .title-star, .title-img, .fade-drop"), {
-          autoAlpha: 0,
-        });
+        gsap.set(targets, { autoAlpha: 0 });
+        console.log(mvRef.current);
         setTimeout(() => {
           mvAnime();
         }, 3500);
       } else {
+        gsap.set(targets, { autoAlpha: 1 });
         return;
       }
 
@@ -33,7 +35,6 @@ export function Mv() {
         tl.fromTo(
           q(".fade-free"),
           {
-            opacity: 1,
             scale: 0,
           },
           { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -41,7 +42,6 @@ export function Mv() {
           .fromTo(
             q(".fade-LT"),
             {
-              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -49,7 +49,6 @@ export function Mv() {
           .fromTo(
             q(".fadeImg"),
             {
-              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -57,7 +56,6 @@ export function Mv() {
           .fromTo(
             q(".title-star"),
             {
-              opacity: 1,
               scale: 0,
             },
             { scale: 1, duration: 0.5, ease: "bounce.out" },
@@ -65,7 +63,6 @@ export function Mv() {
           .fromTo(
             q(".title-img"),
             {
-              opacity: 1,
               scale: 0,
               rotate: -45,
             },
