@@ -104,8 +104,8 @@ export function Menu() {
       <div className={style.wrap} ref={fadeRef}>
         <div className={`${style.menuContent} ${style.mc01}`}>
           <div className={style.menuContentImg}>
-            <div className={`${style.img} fadeImg01`}>
-              <img src={menu01} alt="" />
+            <div className={style.img}>
+              <img src={menu01} alt="" className="fadeImg01" />
             </div>
             <div className={style.bg}>
               <img src={menu01Bg} alt="" />
@@ -119,8 +119,8 @@ export function Menu() {
         </div>
         <div className={`${style.menuContent} ${style.mc02}`}>
           <div className={style.menuContentImg}>
-            <div className={`${style.img} fadeImg02`}>
-              <img src={menu02} alt="" />
+            <div className={style.img}>
+              <img src={menu02} alt="" className="fadeImg02" />
             </div>
             <div className={style.bg}>
               <img src={menu02Bg} alt="" />
