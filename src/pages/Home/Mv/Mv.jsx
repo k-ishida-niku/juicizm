@@ -110,15 +110,16 @@ export function Mv() {
       <div className={style.mvBg}>
         <div className={style.mvImg01}>
           <img src={mvImg01} alt="" className="fadeImg" />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 941.314 661.825" className={`${style.mvImgText} fadeImg`}>
-            <path id="my-path01" data-name="パス 891" d="M940.315,330.412c0,209.86-210.5,330.412-470.157,330.412S0,540.273,0,330.412,210.5,0,470.157,0,940.315,120.552,940.315,330.412" transform="translate(0.5 0.5)" fill="none" stroke="transarent" stroke-width="1" />
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070.79 713.88" className={`${style.mvImgText} fadeImg`}>
+            <path id="my-path01" data-name="パス 894" d="M1069.79,356.44c0,226.391-239.479,356.44-534.895,356.44S0,582.831,0,356.44,239.479,0,534.895,0,1069.79,130.049,1069.79,356.44" transform="translate(0.5 0.5)" fill="none" stroke="transparent" stroke-width="1" />
             <text>
               <textPath href="#my-path01" className={style.textPath} startOffset="0%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
                 <animate attributeName="startOffset" from="0%" to="100%" dur="80s" repeatCount="indefinite" />
               </textPath>
               <textPath href="#my-path01" className={style.textPath} startOffset="-100%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZ
                 <animate attributeName="startOffset" from="-100%" to="0%" dur="80s" repeatCount="indefinite" />
               </textPath>
             </text>
@@ -129,23 +130,23 @@ export function Mv() {
         </div>
         <div className={style.mvImg02}>
           <img src={mvImg02} alt="" className="fadeImg" />
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 596.822 419.43" className={`${style.mvImgText} fadeImg`}>
-            <path id="my-path02" data-name="パス 892" d="M596.822,209.715c0,133.2-133.6,209.715-298.411,209.715S0,342.915,0,209.715,133.6,0,298.411,0,596.822,76.515,596.822,209.715" fill="none" stroke="transparent" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 709.32 468.29" className={`${style.mvImgText} fadeImg`}>
+            <path id="my-path02" data-name="パス 895" d="M708.32,233.645c0,148.4-158.562,233.645-354.16,233.645S0,382.044,0,233.645,158.562,0,354.16,0,708.32,85.246,708.32,233.645" transform="translate(0.5 0.5)" fill="none" stroke="transparent" stroke-width="1" />
             <text>
               <textPath href="#my-path02" className={`${style.textPath} ${style.small} ${style.sp}`} startOffset="100%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
                 <animate attributeName="startOffset" from="100%" to="0%" dur="80s" repeatCount="indefinite" />
               </textPath>
               <textPath href="#my-path02" className={`${style.textPath} ${style.small} ${style.sp}`} startOffset="0%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
                 <animate attributeName="startOffset" from="0%" to="-100%" dur="80s" repeatCount="indefinite" />
               </textPath>
               <textPath href="#my-path02" className={`${style.textPath} ${style.small} ${style.pc}`} startOffset="100%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
                 <animate attributeName="startOffset" from="100%" to="0%" dur="80s" repeatCount="indefinite" />
               </textPath>
               <textPath href="#my-path02" className={`${style.textPath} ${style.small} ${style.pc}`} startOffset="0%" dominant-baseline="hanging">
-                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM
+                JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICIZM JUICI
                 <animate attributeName="startOffset" from="0%" to="-100%" dur="80s" repeatCount="indefinite" />
               </textPath>
             </text>

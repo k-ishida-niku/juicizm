@@ -65,7 +65,7 @@
         translate: 0 -6%;
       }
       .mvImgText {
-        width: 110%;
+        width: calc(100% * 1.137699269389882);
         position: absolute;
         inset: 50% auto auto 50%;
         transform: translate(-50%, -50%);
@@ -95,7 +95,8 @@
         z-index: -1;
       }
       .mvImgText {
-        width: 112%;
+        // width: calc(100% * 1.186823497872055);
+        width: 115%;
         position: absolute;
         inset: 50% auto auto 50%;
         transform: translate(-50%, -50%);
@@ -141,17 +142,17 @@
 }
 
 .textPath {
-  font-size: 40px;
+  font-size: 41.2px;
   font-family: $font-dela, sans-serif;
   fill: #333;
   letter-spacing: 1;
   &.small {
-    font-size: 28px;
+    font-size: 29px;
     &.pc {
       display: none;
     }
     @include res {
-      font-size: 36px;
+      font-size: 38px;
       &.pc {
         display: block;
       }
