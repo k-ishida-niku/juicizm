@@ -83,18 +83,22 @@ export function Commitment() {
             scale: 1,
             duration: 0.8,
           },
-        )
-        .fromTo(
-          w(".fadeItem"),
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            stagger: 0.1,
-            duration: 0.5,
-          },
         );
+      gsap.fromTo(
+        w(".fadeItem"),
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.25,
+          scrollTrigger: {
+            trigger: itemRef.current,
+            start: "top 80%",
+          },
+        },
+      );
     });
     return () => ctx.revert();
   }, []);

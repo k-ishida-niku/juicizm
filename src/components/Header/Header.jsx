@@ -38,7 +38,7 @@ export function Header() {
             <img src={logo} alt="" />
           </a>
         </div>
-        <Nav clickHandle={click} />
+        <Nav clickHandle={click} onClose={() => setClick(false)} />
         <button type="button" className={`${style.bBtn} f-dela`} onClick={handleClick}>
           {click ? "CLOSE" : "MENU"}
         </button>
