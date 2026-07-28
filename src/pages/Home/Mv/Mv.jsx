@@ -1,5 +1,6 @@
 import style from "./Mv.module.scss";
 import siteTitle from "../../../assets/img/mv/site-title.svg";
+import siteTitleSp from "../../../assets/img/mv/site-title-sp.svg";
 import mvImg01 from "../../../assets/img/mv/mv01.webp";
 import mvImg02 from "../../../assets/img/mv/mv02.webp";
 import starburst from "../../../assets/img/global/starburst.svg";
@@ -98,7 +99,10 @@ export function Mv() {
     <div className={style.Mv} ref={mvRef}>
       <div className={style.mvInner}>
         <h1 className={style.siteTitle}>
-          <img src={siteTitle} alt="" className="title-img" />
+          <piture>
+            <source srcSet={siteTitle} media="(width > 767px)" />
+            <img src={siteTitleSp} alt="" className="title-img" />
+          </piture>
           <div className={`${style.titleStar} title-star`}>
             <img src={starburst} alt="" />
           </div>
