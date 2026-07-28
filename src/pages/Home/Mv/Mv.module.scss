@@ -10,7 +10,7 @@
     // background-color: $main-color;
     background-color: rgb(52, 250, 79);
     position: absolute;
-    inset: auto auto calc(100vh + clamp(261px, 2.79vw + 250.119px, 293px) * 1) 0;
+    inset: auto auto calc(clamp(261px, 2.79vw + 250.119px, 293px) * -1) 0;
     z-index: 10;
     pointer-events: none;
   }
