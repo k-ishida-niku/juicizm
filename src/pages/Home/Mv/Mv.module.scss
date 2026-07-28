@@ -5,6 +5,7 @@
   isolation: isolate;
   margin-bottom: clamp(261px, 2.79vw + 250.119px, 293px);
   .loadingOverlay {
+    // うまくいかない
     width: 100%;
     height: calc(100vh + clamp(261px, 2.79vw + 250.119px, 293px));
     background-color: $main-color;

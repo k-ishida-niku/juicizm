@@ -31,7 +31,6 @@ export function Mv() {
         gsap.to(q(".fade-overlay"), { opacity: 0, duration: 0 });
         return;
       }
-
       function mvAnime() {
         const tl = gsap.timeline();
         tl.to(q(".fade-overlay"), {
