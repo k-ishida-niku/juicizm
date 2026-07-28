@@ -70,19 +70,17 @@ export function Loading() {
 
   return (
     <div className={style.loading} ref={loadingRef}>
-      <div className={style.loadingInner}>
-        <div className={style.contentBox}>
-          <div className={`${style.text} f-dela`}>満腹度、低下中・・・。</div>
-          <div className={style.progressBar}>
-            <div className={`${style.progressBarBg} loadBar`}></div>
-          </div>
-          <div className={`${style.count} f-dela`}>
-            <span className={style.countNum}>{count}</span>
-            <span>%</span>
-          </div>
+      <div className={style.contentBox}>
+        <div className={`${style.text} f-dela`}>満腹度、低下中・・・。</div>
+        <div className={style.progressBar}>
+          <div className={`${style.progressBarBg} loadBar`}></div>
         </div>
-        <div className={`${style.message} f-dela loadMessage`}>腹ペコだ!!</div>
+        <div className={`${style.count} f-dela`}>
+          <span className={style.countNum}>{count}</span>
+          <span>%</span>
+        </div>
       </div>
+      <div className={`${style.message} f-dela loadMessage`}>腹ペコだ!!</div>
     </div>
   );
 }

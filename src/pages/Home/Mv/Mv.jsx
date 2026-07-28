@@ -34,12 +34,22 @@ export function Mv() {
       function mvAnime() {
         const tl = gsap.timeline();
         tl.fromTo(
-          q(".fade-free"),
+          q(".fade-overlay"),
           {
-            scale: 0,
+            opacity: 1,
           },
-          { scale: 1, duration: 0.5, ease: "bounce.out" },
+          {
+            opacity: 0,
+            duration: 0.5,
+          },
         )
+          .fromTo(
+            q(".fade-free"),
+            {
+              scale: 0,
+            },
+            { scale: 1, duration: 0.5, ease: "bounce.out" },
+          )
           .fromTo(
             q(".fade-LT"),
             {
@@ -97,6 +107,7 @@ export function Mv() {
 
   return (
     <div className={style.Mv} ref={mvRef}>
+      <div className={`${style.loadingOverlay} fade-overlay`}></div>
       <div className={style.mvInner}>
         <h1 className={style.siteTitle}>
           <piture>
