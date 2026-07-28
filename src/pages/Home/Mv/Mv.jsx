@@ -28,6 +28,7 @@ export function Mv() {
         }, 3500);
       } else {
         gsap.set(targets, { autoAlpha: 1 });
+        gsap.to(q(".fade-overlay"), { opacity: 0, duration: 0 });
         return;
       }
 

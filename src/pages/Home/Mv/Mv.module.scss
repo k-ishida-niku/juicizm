@@ -11,6 +11,7 @@
     position: absolute;
     inset: 0 auto auto 0;
     z-index: 10;
+    pointer-events: none;
   }
   .mvInner {
     width: 88%;
