@@ -4,17 +4,15 @@
   position: relative;
   isolation: isolate;
   margin-bottom: clamp(261px, 2.79vw + 250.119px, 293px);
-  .loadingOverlay {
-    // うまくいかない
-    width: 100%;
-    height: calc(100vh + clamp(261px, 2.79vw + 250.119px, 293px));
-    background-color: $main-color;
-    // background-color: rgb(52, 250, 79);
-    position: absolute;
-    inset: auto auto calc(clamp(261px, 2.79vw + 250.119px, 293px) * -1) 0;
-    z-index: 10;
-    pointer-events: none;
-  }
+  // .loadingOverlay {
+  //   width: 100%;
+  //   height: calc(100vh + clamp(261px, 2.79vw + 250.119px, 293px));
+  //   background-color: $main-color;
+  //   position: absolute;
+  //   inset: auto auto calc(clamp(261px, 2.79vw + 250.119px, 293px) * -1) 0;
+  //   z-index: 10;
+  //   pointer-events: none;
+  // }
   .mvInner {
     width: 88%;
     height: 100%;

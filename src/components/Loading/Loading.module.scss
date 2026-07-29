@@ -7,9 +7,6 @@
   z-index: 10000;
   display: grid;
   place-items: center;
-  @include res {
-    height: 100vh;
-  }
   .contentBox {
     width: min(100%, 800px);
     display: flex;

@@ -101,7 +101,7 @@ export function Mv() {
 
   return (
     <div className={style.Mv} ref={mvRef}>
-      <div className={`${style.loadingOverlay} fade-overlay`}></div>
+      {/* <div className={`${style.loadingOverlay} fade-overlay`}></div> */}
       <div className={style.mvInner}>
         <h1 className={style.siteTitle}>
           <piture>
