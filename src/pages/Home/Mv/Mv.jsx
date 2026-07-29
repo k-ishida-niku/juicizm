@@ -101,14 +101,12 @@ export function Mv() {
 
   return (
     <div className={style.Mv} ref={mvRef}>
-      {/* <div className={`${style.loadingOverlay} fade-overlay`}></div> */}
       <div className={style.mvInner}>
         <h1 className={style.siteTitle}>
-          {/* <piture>
+          <piture>
             <source srcSet={siteTitle} media="(width > 767px)" />
             <img src={siteTitleSp} alt="" className="title-img" />
-          </piture> */}
-          <img src={siteTitle} alt="" />
+          </piture>
           <div className={`${style.titleStar} title-star`}>
             <img src={starburst} alt="" />
           </div>

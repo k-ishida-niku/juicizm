@@ -46,7 +46,7 @@
     margin: 0 auto 90px;
     display: flex;
     flex-direction: column;
-    gap: 40px 49.5px;
+    gap: 40px 47.5px;
     @include res {
       flex-direction: row;
     }
@@ -58,7 +58,7 @@
       border-bottom: 2px solid $main-color;
       @include res {
         flex-direction: row;
-        padding: 0 59.5px 0 0;
+        padding: 0 57.5px 0 0;
 
         border-bottom: none;
         border-right: 2px solid $main-color;
@@ -71,6 +71,7 @@
         color: $main-color;
         font-size: clamp(14px, 0.17vw + 13.337px, 16px);
         font-weight: 800;
+        letter-spacing: normal;
 
         a {
           color: $main-color;
@@ -84,20 +85,23 @@
         grid-template: auto / repeat(auto-fit, minmax(120px, 1fr));
         gap: 24px 0;
         @include res {
-          gap: 0 32px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0 30px;
         }
         li {
           a {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 6px;
             font-size: clamp(20px, 0.17vw + 19.337px, 22px);
             color: $main-color;
             transition: all 0.3s;
+            letter-spacing: normal;
             &::after {
               content: "";
               display: block;
-              width: clamp(10.05px, 0.09vw + 9.699px, 11.05px);
+              width: clamp(13.5px, 0.04vw + 13.344px, 14px);
               aspect-ratio: 0.9170124481327801;
               background: url(../../assets//img/global/arrow.svg) no-repeat center / cover;
               transition: all 0.3s;
