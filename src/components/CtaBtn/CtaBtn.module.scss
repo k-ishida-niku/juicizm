@@ -1,18 +1,19 @@
 .ctaBtn {
-  // width: min(100%, 455px);
   display: flex;
   justify-content: space-between;
-  padding: clamp(13.5px, 0.57vw + 11.277px, 20px) clamp(30px, 0.87vw + 26.607px, 40px);
+  padding: clamp(20px, 0.7vw + 17.27px, 28px) clamp(30px, 0.87vw + 26.607px, 40px);
   border-radius: 50px;
   align-items: center;
   background-color: $main-color;
   color: #fff;
   transition: all 0.3s;
-
+  font-size: clamp(22px, 1.22vw + 17.242px, 36px);
+  line-height: 1;
   &::after {
     content: "";
     display: block;
-    width: clamp(12.32px, 0.59vw + 10.019px, 19.07px);
+    width: clamp(20px, 0.7vw + 17.27px, 28px);
+    // width: 50px;
     aspect-ratio: 0.9168269230769231;
     background: url(../../assets/img/global/arrow-white.svg) no-repeat center / cover;
     transition: all 0.3s;

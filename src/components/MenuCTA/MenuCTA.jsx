@@ -54,8 +54,8 @@ export function MenuCTA(props) {
         <p className={style.ctaText}>ジューシズムには他にも魅力のメニューがたくさん！</p>
       </div>
       <div className={`${style.CtaBtnContainer}`}>
-        <CtaBtn btnText="フードメニュー" mw="419.07" />
-        <CtaBtn btnText="ドリンクメニュー" mw="419.07" />
+        <CtaBtn btnText="フードメニュー" mw="455" />
+        <CtaBtn btnText="ドリンクメニュー" mw="455" />
       </div>
     </div>
   );

@@ -126,11 +126,13 @@
           isolation: isolate;
           .commitmentItemTitleNum {
             width: clamp(109.23px, 3.86vw + 94.176px, 153.49px);
+            aspect-ratio: 1.56524208433906;
+            background: url(../../../assets/img/commitment/num-bg.svg) no-repeat center / 100% 100%;
             font-size: clamp(54px, 2.27vw + 45.147px, 80px);
             text-align: center;
-            padding: clamp(17px, 0.26vw + 15.986px, 20px) 0;
-            border-radius: 50%;
-            background-color: $main-color;
+            padding: calc(clamp(17px, 0.26vw + 15.986px, 20px) + 3px) 0 clamp(17px, 0.26vw + 15.986px, 20px);
+            // border-radius: 50%;
+            // background-color: $main-color;
             color: #fff;
             text-box: trim-both cap alphabetic;
           }
@@ -150,6 +152,7 @@
           width: clamp(230px, 2.62vw + 219.782px, 260px);
           margin: 0 auto;
           position: relative;
+          font-weight: 800;
           p {
             font-size: clamp(14px, 0.17vw + 13.337px, 16px);
             letter-spacing: normal;

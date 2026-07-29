@@ -12,9 +12,9 @@
       color: #fff;
       background: url(../../assets/img/menu/menu-sb.svg) no-repeat center / cover;
       position: absolute;
-      inset: calc(-180% - 18px) auto auto -10%;
+      inset: calc(-180% - 26px) auto auto -10%;
       @include res {
-        inset: calc(-150% - 18px) auto auto -10%;
+        inset: calc(-150% - 26px) auto auto -10%;
       }
 
       .sbText {
@@ -46,6 +46,7 @@
     margin-bottom: 40px;
     .menuDescText {
       text-align: justify;
+      font-weight: 800;
       @include res {
         text-wrap: nowrap;
       }
@@ -90,6 +91,7 @@
         flex: 1;
         display: flex;
         align-items: center;
+        gap: 4px;
         &::after {
           content: "税込";
           display: block;
@@ -97,6 +99,7 @@
           font-family: "Noto Sans jp", sans-serif;
           font-size: clamp(8px, 0.26vw + 6.986px, 11px);
           line-height: 1.2;
+          font-weight: 900;
         }
       }
     }

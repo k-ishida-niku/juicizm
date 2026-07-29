@@ -23,7 +23,7 @@
         place-items: center;
         border-radius: 50%;
         img {
-          width: clamp(17.51px, 0.39vw + 15.989px, 22px);
+          width: clamp(26px, 0.35vw + 24.635px, 30px);
           transition: all 0.3s;
         }
       }
@@ -60,6 +60,7 @@
         place-items: center;
         padding: 11px 0;
         border-radius: 50px;
+        line-height: 1.2;
       }
     }
     .newsText {

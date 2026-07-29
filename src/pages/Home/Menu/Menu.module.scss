@@ -16,7 +16,7 @@
     .menuContent {
       display: flex;
       flex-direction: column;
-      gap: 85.3px 0;
+      gap: 96.3px 0;
       @include res {
         flex-direction: row;
         align-items: center;
@@ -86,6 +86,7 @@
           margin-top: 16px;
           font-size: 14px;
           line-height: 1;
+          font-weight: 800;
         }
       }
     }

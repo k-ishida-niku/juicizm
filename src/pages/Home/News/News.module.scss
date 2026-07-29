@@ -11,6 +11,12 @@
         @include sectionTitle($tc: #fff, $sc: $main-color, $bg: #fff);
         flex-direction: column;
       }
+      .sectionTitle {
+        align-items: center;
+        @include res {
+          align-items: flex-start;
+        }
+      }
     }
     .newsList {
       display: grid;
