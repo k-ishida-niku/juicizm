@@ -76,6 +76,15 @@ export function News() {
               })}
             </span>
           </h2>
+          <a href="" className={`${style.moreBtn} f-dela`}>
+            <span className={style.btnText}>
+              <span className={style.jp}>もっと見る</span>
+              <span className={style.en}>MORE</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.239 72.43" className={style.moreBtnBg}>
+              <path id="パス_43" data-name="パス 43" d="M110.238,35.215c0,22.367-24.678,35.215-55.119,35.215S0,57.581,0,35.215,24.678,0,55.119,0s55.119,12.848,55.119,35.215" transform="translate(1 1)" stroke-width="2" />
+            </svg>
+          </a>
         </div>
         <ul className={style.newsList} ref={fadeRef}>
           {newsContent.map((item, index) => {

@@ -5,16 +5,75 @@
   .newsInner {
     width: min(75%, 1200px);
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
     .newsIntroContents {
       margin-bottom: clamp(70px, 3.49vw + 56.389px, 110px);
+      display: contents;
+      @include res {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
       .sectionTitle {
         @include sectionTitle($tc: #fff, $sc: $main-color, $bg: #fff);
         flex-direction: column;
-      }
-      .sectionTitle {
         align-items: center;
+        margin-bottom: clamp(70px, 3.49vw + 56.389px, 110px);
         @include res {
           align-items: flex-start;
+          margin-bottom: 0;
+        }
+      }
+      .moreBtn {
+        display: grid;
+        place-items: center;
+        width: clamp(188px, 4.19vw + 171.659px, 236px);
+        aspect-ratio: 1.447852760736196;
+        margin: 23px 0 0 auto;
+        color: $main-color;
+        transition: all 0.3s;
+        position: relative;
+        right: calc(((116.3265306122449% - 100%) / 2) * -1);
+        order: 1;
+        rotate: 15deg;
+        @include res {
+          margin: 0;
+          right: 0;
+          order: 0;
+          translate: 0 15%;
+        }
+        .btnText {
+          position: absolute;
+          inset: 50% auto auto 50%;
+          translate: -50% -50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: clamp(12px, 0.26vw + 10.986px, 15px);
+          .jp {
+            font-size: clamp(14px, 0.35vw + 12.635px, 18px);
+            display: block;
+            text-box: trim-both cap alphabetic;
+          }
+          .en {
+            font-size: clamp(30px, 0.87vw + 26.607px, 40px);
+            display: block;
+            text-box: trim-both cap alphabetic;
+          }
+        }
+        .moreBtnBg {
+          width: 100%;
+          fill: #fff;
+          stroke: transparent;
+          transition: all 0.3s;
+        }
+        &:hover {
+          color: #fff;
+          .moreBtnBg {
+            fill: $main-color;
+            stroke: #fff;
+          }
         }
       }
     }
