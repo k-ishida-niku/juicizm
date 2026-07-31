@@ -121,6 +121,7 @@
       .dropContainer {
         display: flex;
         position: absolute;
+        flex-direction: row-reverse;
         inset: 0 auto auto 0;
         transform: translate(-72%, 87%);
         // transform: translate(-70%, 90%);

@@ -89,7 +89,7 @@ export function Mv() {
             {
               yPercent: 0,
               duration: 1,
-              stagger: 0.2,
+              stagger: 0.3,
               ease: "power1.out",
             },
           )
@@ -168,10 +168,10 @@ export function Mv() {
         <div className={style.mvBgStarFree}>
           <img src={starburst} alt="" className="fade-free" />
           <div className={style.dropContainer}>
-            <div className={`${style.dropPc} ${style.small} fade-drop`}>
+            <div className={`${style.dropPc}  fade-drop`}>
               <img src={drop} alt="" />
             </div>
-            <div className={`${style.dropPc} fade-drop`}>
+            <div className={`${style.dropPc} ${style.small} fade-drop`}>
               <img src={drop} alt="" />
             </div>
           </div>
