@@ -57,7 +57,7 @@
   .drop {
     width: clamp(116px, 6.98vw + 88.778px, 196px);
     position: absolute;
-    inset: auto auto -10% -8%;
+    inset: auto auto -6% -8%;
     @include res {
       inset: auto auto -5% 5%;
     }

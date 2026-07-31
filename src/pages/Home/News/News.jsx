@@ -78,7 +78,18 @@ export function News() {
           </h2>
           <a href="" className={`${style.moreBtn} f-dela`}>
             <span className={style.btnText}>
-              <span className={style.jp}>もっと見る</span>
+              <span className={style.jp}>
+                もっと見る
+                <span className={style.arrow}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.657 35.313">
+                    <g id="グループ_318" data-name="グループ 318" transform="translate(-83.5 -6428.843)">
+                      <line id="線_8" data-name="線 8" y2="22" transform="translate(109.5 6446.5) rotate(90)" fill="none" stroke="#ff5206" stroke-linecap="round" stroke-width="8" />
+                      <line id="線_9" data-name="線 9" x1="12" y2="12" transform="translate(109.5 6434.5) rotate(90)" fill="none" stroke="#ff5206" stroke-linecap="round" stroke-width="8" />
+                      <line id="線_10" data-name="線 10" x2="12" y2="12" transform="translate(109.5 6446.5) rotate(90)" fill="none" stroke="#ff5206" stroke-linecap="round" stroke-width="8" />
+                    </g>
+                  </svg>
+                </span>
+              </span>
               <span className={style.en}>MORE</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.239 72.43" className={style.moreBtnBg}>

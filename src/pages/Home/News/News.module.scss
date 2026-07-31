@@ -46,7 +46,7 @@
         .btnText {
           position: absolute;
           inset: 50% auto auto 50%;
-          translate: -50% -50%;
+          translate: -49% -50%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -55,6 +55,26 @@
             font-size: clamp(14px, 0.35vw + 12.635px, 18px);
             display: block;
             text-box: trim-both cap alphabetic;
+            display: flex;
+            align-items: center;
+            gap: 7.8px;
+            // text-box: trim-both cap alphabetic;
+            line-height: 1;
+
+            .arrow {
+              display: grid;
+              place-items: center;
+              width: clamp(10.8px, 0.17vw + 10.137px, 12.78px);
+              height: clamp(11.47px, 0.19vw + 10.729px, 13.61px);
+              transition: all 0.3s;
+              svg {
+                width: 100%;
+                height: 100%;
+                line {
+                  transition: all 0.3s;
+                }
+              }
+            }
           }
           .en {
             font-size: clamp(30px, 0.87vw + 26.607px, 40px);
@@ -70,6 +90,12 @@
         }
         &:hover {
           color: #fff;
+          .arrow {
+            translate: 30% 0;
+            line {
+              stroke: #fff;
+            }
+          }
           .moreBtnBg {
             fill: $main-color;
             stroke: #fff;

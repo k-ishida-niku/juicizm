@@ -84,14 +84,23 @@ export function Mv() {
           .fromTo(
             q(".fade-drop"),
             {
+              yPercent: -100,
+            },
+            {
+              yPercent: 0,
+              duration: 1,
+              stagger: 0.2,
+              ease: "power1.out",
+            },
+          )
+          .fromTo(
+            q(".opa-drop"),
+            {
               opacity: 0,
-              yPercent: -40,
             },
             {
               opacity: 1,
-              yPercent: 0,
               duration: 1,
-              stagger: 0.5,
             },
           );
       }
@@ -115,7 +124,6 @@ export function Mv() {
       <div className={style.mvBg}>
         <div className={style.mvImg01}>
           <img src={mvImg01} alt="" className="fadeImg" />
-
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1070.79 713.88" className={`${style.mvImgText} fadeImg`}>
             <path id="my-path01" data-name="パス 894" d="M1069.79,356.44c0,226.391-239.479,356.44-534.895,356.44S0,582.831,0,356.44,239.479,0,534.895,0,1069.79,130.049,1069.79,356.44" transform="translate(0.5 0.5)" fill="none" stroke="transparent" stroke-width="1" />
             <text>
@@ -159,11 +167,16 @@ export function Mv() {
         </div>
         <div className={style.mvBgStarFree}>
           <img src={starburst} alt="" className="fade-free" />
-          <div className={`${style.dropPc} fade-drop`}>
-            <img src={drop} alt="" />
+          <div className={style.dropContainer}>
+            <div className={`${style.dropPc} ${style.small} fade-drop`}>
+              <img src={drop} alt="" />
+            </div>
+            <div className={`${style.dropPc} fade-drop`}>
+              <img src={drop} alt="" />
+            </div>
           </div>
         </div>
-        <div className={`${style.drop} fade-drop`}>
+        <div className={`${style.drop} opa-drop`}>
           <img src={drop} alt="" />
         </div>
       </div>

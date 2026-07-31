@@ -34,7 +34,7 @@
       width: min(96%, 1477px);
       display: flex;
       align-items: flex-start;
-      gap: 188px;
+      gap: 109px;
     }
     @include res(1699px) {
       width: min(87%, 1668.51px);
@@ -108,6 +108,7 @@
         flex-direction: row-reverse;
         justify-content: flex-end;
         flex: 1;
+        gap: 0 0%;
       }
       .map {
         min-height: 361.89px;
@@ -118,6 +119,7 @@
         left: 14vw;
         @include res {
           position: static;
+          translate: 5%;
         }
         iframe {
           width: 100%;

@@ -24,6 +24,7 @@
       width: clamp(356.96px, 39.29vw + 203.729px, 958.09px);
       position: relative;
       isolation: isolate;
+      will-change: transform;
       img {
         display: block;
         @include res {
@@ -31,16 +32,17 @@
         }
       }
       .titleStar {
-        width: clamp(231.62px, 27.19vw + 125.579px, 543.19px);
-        width: 225px;
+        width: clamp(225px, 27.77vw + 116.697px, 543.19px);
+        // width: 225px;
         position: absolute;
         z-index: -1;
         inset: auto 0 0 auto;
         transform: translate(36%, 22%) rotate(15deg);
 
         @include res {
+          // width: 543.19px;
           inset: auto auto 0 0;
-          transform: translate(-25%, 23%);
+          transform: translate(-25%, 23%) rotate(15deg);
         }
       }
     }
@@ -80,6 +82,7 @@
         z-index: -1;
         inset: 0 auto auto 0;
         transform: translate(10%, -46%);
+        will-change: transform;
         @include res {
           transform: translate(14%, -38%) rotate(60deg);
         }
@@ -89,6 +92,7 @@
       width: clamp(362.24px, 20.47vw + 282.407px, 596.82px);
       position: absolute;
       inset: auto clamp(36px, 1.48vw + 30.228px, 53px) clamp(24px, 1.05vw + 19.905px, 36px) auto;
+      will-change: transform;
       @include res {
         translate: 0 20%;
         z-index: -1;
@@ -114,15 +118,25 @@
         inset: 0 0 auto auto;
         transform: translate(10%, -30%);
       }
-      .dropPc {
-        width: 205.36px;
+      .dropContainer {
+        display: flex;
         position: absolute;
-        z-index: -2;
         inset: 0 auto auto 0;
-        transform: translate(-30%, 90%);
-        display: none;
-        @include res {
-          display: block;
+        transform: translate(-72%, 87%);
+        // transform: translate(-70%, 90%);
+        z-index: -2;
+        .dropPc {
+          width: 205.36px;
+          display: none;
+          will-change: transform;
+          // translate: 0 -100%;
+          @include res {
+            display: block;
+          }
+          &.small {
+            width: 95px;
+            // aspect-ratio: 0.6985294117647059;
+          }
         }
       }
     }
