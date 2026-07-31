@@ -4,6 +4,11 @@
   position: relative;
   isolation: isolate;
   margin-bottom: clamp(261px, 16.49vw + 196.689px, 450px);
+  margin-bottom: 190px;
+  @media (height > 668px) {
+    margin-bottom: clamp(42px, -90.96vh + 808.72px, 192px);
+  }
+
   @include res($bp: 1536px) {
     margin-bottom: clamp(32px, -114.58vw + 2250px, 450px);
   }
@@ -52,9 +57,14 @@
     width: clamp(596.13px, 115.87vw + 144.237px, 1923.96px);
     height: clamp(657.7797px, 5.2vw + 637.5px, 717.4px);
     position: absolute;
-    inset: 90px auto auto 50%;
+    // inset: 90px auto auto 50%;
+    inset: 14vh auto auto 50%;
     transform: translateX(calc(-50% + 7vw));
     z-index: -1;
+    @media (height > 895px) {
+      top: 20vh;
+    }
+
     @include res {
       top: clamp(91.9px, 17.19vw + -172.138px, 157.9px);
       transform: translateX(calc(-50% - 0.18vw));
