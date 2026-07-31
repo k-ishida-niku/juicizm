@@ -4,8 +4,7 @@
   position: relative;
   isolation: isolate;
   margin-bottom: clamp(261px, 16.49vw + 196.689px, 450px);
-  margin-bottom: 190px;
-  @media (height > 668px) {
+  @media (height > 668px) and (width < 768px) {
     margin-bottom: clamp(42px, -90.96vh + 808.72px, 192px);
   }
 
@@ -57,11 +56,10 @@
     width: clamp(596.13px, 115.87vw + 144.237px, 1923.96px);
     height: clamp(657.7797px, 5.2vw + 637.5px, 717.4px);
     position: absolute;
-    // inset: 90px auto auto 50%;
     inset: 14vh auto auto 50%;
     transform: translateX(calc(-50% + 7vw));
     z-index: -1;
-    @media (height > 895px) {
+    @media (height > 895px) and (width < 768px) {
       top: 20vh;
     }
 
