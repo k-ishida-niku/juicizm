@@ -55,11 +55,11 @@
     }
   }
   .drop {
-    width: clamp(116px, 6.98vw + 88.778px, 196px);
+    width: clamp(100px, 5.93vw + 76.873px, 168px);
     position: absolute;
-    inset: auto auto -6% -8%;
+    inset: auto auto -7% -1.5%;
     @include res {
-      inset: auto auto -5% 5%;
+      inset: auto auto -3% 5%;
     }
   }
 }
