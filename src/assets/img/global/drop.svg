@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="277.877" height="277.877" viewBox="0 0 277.877 277.877">
-  <path id="パス_655" data-name="パス 655" d="M88.394,24.334a83.082,83.082,0,0,1,117.5,117.5C178.331,169.383,72.362,190.61,41.04,196.385a6.175,6.175,0,0,1-7.2-7.206c5.771-31.326,27-137.292,54.556-164.846" transform="translate(301.729 115.089) rotate(135)" fill="#ff5206"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="175" height="253.86" viewBox="0 0 175 253.86">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_191" data-name="長方形 191" width="175" height="253.86" transform="translate(-8351 -1653)" fill="#fff" opacity="0.5"/>
+    </clipPath>
+  </defs>
+  <g id="マスクグループ_59" data-name="マスクグループ 59" transform="translate(8351 1653)" clip-path="url(#clip-path)">
+    <path id="パス_666" data-name="パス 666" d="M90.862,25.432a86.832,86.832,0,0,1,122.8,122.8c-28.8,28.8-139.554,50.983-172.29,57.019a6.453,6.453,0,0,1-7.526-7.531C39.875,164.978,62.064,54.23,90.862,25.432" transform="translate(-8094.729 -1533.64) rotate(135)" fill="#ff5206"/>
+  </g>
 </svg>

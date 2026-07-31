@@ -3,7 +3,10 @@
   height: 100vh;
   position: relative;
   isolation: isolate;
-  margin-bottom: clamp(261px, 2.79vw + 250.119px, 293px);
+  margin-bottom: clamp(261px, 16.49vw + 196.689px, 450px);
+  @include res($bp: 1536px) {
+    margin-bottom: clamp(32px, -114.58vw + 2250px, 450px);
+  }
   .mvInner {
     width: 88%;
     height: 100%;
@@ -33,14 +36,12 @@
       }
       .titleStar {
         width: clamp(225px, 27.77vw + 116.697px, 543.19px);
-        // width: 225px;
         position: absolute;
         z-index: -1;
         inset: auto 0 0 auto;
         transform: translate(36%, 22%) rotate(15deg);
 
         @include res {
-          // width: 543.19px;
           inset: auto auto 0 0;
           transform: translate(-25%, 23%) rotate(15deg);
         }
@@ -122,34 +123,32 @@
         display: flex;
         position: absolute;
         flex-direction: row-reverse;
+        gap: 60px;
         inset: 0 auto auto 0;
-        transform: translate(-72%, 87%);
-        // transform: translate(-70%, 90%);
+        transform: translate(-83%, 85%);
         z-index: -2;
         .dropPc {
-          width: 205.36px;
+          width: 155px;
           display: none;
           will-change: transform;
-          // translate: 0 -100%;
           @include res {
             display: block;
           }
           &.small {
             width: 95px;
-            // aspect-ratio: 0.6985294117647059;
           }
         }
       }
     }
     .drop {
-      width: clamp(84.1px, 14.86vw + 26.146px, 254.43px);
+      width: clamp(71.5px, 12.61vw + 22.321px, 216px);
       position: absolute;
       z-index: -1;
       inset: auto 0 0 auto;
-      transform: translate(-136%, 54%);
+      transform: translate(-175%, 54%);
       @include res {
         inset: auto auto 0 0;
-        transform: translate(48%, 65%);
+        transform: translate(68%, 65%);
       }
     }
   }
