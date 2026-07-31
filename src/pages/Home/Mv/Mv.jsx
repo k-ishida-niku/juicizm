@@ -89,7 +89,7 @@ export function Mv() {
             {
               yPercent: 0,
               duration: 1,
-              stagger: 0.3,
+              stagger: 0.1,
               ease: "power1.out",
             },
           )
