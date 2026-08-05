@@ -9,7 +9,7 @@
   }
 
   @include res($bp: 1536px) {
-    margin-bottom: clamp(32px, -114.58vw + 2250px, 450px);
+    margin-bottom: clamp(200px, -56.25vw + 1314px, 450px);
   }
   .mvInner {
     width: 88%;

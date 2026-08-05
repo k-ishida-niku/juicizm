@@ -84,7 +84,7 @@ export function Mv() {
           .fromTo(
             q(".fade-drop"),
             {
-              yPercent: -110,
+              yPercent: -150,
             },
             {
               yPercent: 0,
